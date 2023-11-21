@@ -1,10 +1,10 @@
-import LCUPlugin from 'lcu-plugin';
+import LcuPlugin from 'lcu-plugin';
 import axios from 'axios';
 
 const LOBBY_MATCHMAKING_SEARCH_ENDPOINT = 'lol-lobby/v2/lobby/matchmaking/search';
 const CONVERSATIONS_EVENT = 'OnJsonApiEvent_lol-chat_v1_conversations';
 
-export default class StartQueueLcuPlugin extends LCUPlugin {
+export default class StartQueueLcuPlugin extends LcuPlugin {
   onConnect(clientData) {
     axios.defaults.baseURL = `${clientData.protocol}://${clientData.address}:${clientData.port}`;
     axios.defaults.auth = { username: clientData.username, password: clientData.password };
