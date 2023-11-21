@@ -10,7 +10,7 @@
   "engines": {
     "node": ">=20"
   },
-  "main": "src/tahmKenchLcuPlugin.js",
+  "main": "src/startQueueLcuPlugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.js\""
