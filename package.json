@@ -1,6 +1,6 @@
 {
   "name": "lcu-start-queue-plugin",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A League of Legends Client plugin that starts queue when someone says start in party chat",
   "type": "module",
   "repository": {

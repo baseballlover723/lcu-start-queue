@@ -15,12 +15,12 @@ export default class StartQueueLcuPlugin extends LcuPlugin {
     axios.defaults.baseURL = `${clientData.protocol}://${clientData.address}:${clientData.port}`;
     axios.defaults.auth = { username: clientData.username, password: clientData.password };
     return this.createPromise((resolve, reject) => {
-      this.getCurrentSummoner().catch((error) => {
-        reject(error);
-      }).then((summonerId) => {
+      this.getCurrentSummoner().then((summonerId) => {
         this.subscribeEvent(CONVERSATIONS_EVENT, this.handleLobbyChat(summonerId));
         this.log('is ready');
         resolve();
+      }).catch((error) => {
+        reject(error);
       });
     });
   }
